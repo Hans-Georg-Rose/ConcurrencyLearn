@@ -10,7 +10,48 @@ import Foundation
 struct APIService {
     
     let urlString: String
+
+    // MARK: Create a variant of getJSON for the Async & Await concurrency method
     
+    func getJSON <T: Decodable> (dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
+                                 keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) async throws -> T {
+
+        // check url
+
+        guard
+            let url = URL(string: urlString)
+        else {
+            throw APIError.invalidURL
+        }
+        
+        // call the async version of URLSession, must be in a try as throwing and must exist only in a async function block
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            guard
+                let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200
+            else {
+                throw APIError.invalidResponseStatus
+            }
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = dateDecodingStrategy
+            decoder.keyDecodingStrategy = keyDecodingStrategy
+            do {
+                // Decode
+                let decodedData = try decoder.decode(T.self, from: data)
+                return decodedData
+            } catch {
+                throw APIError.decodingError(error.localizedDescription)
+            }
+        } catch { // process all eventually occuring errors as URLsession.shard.data is throwing
+            throw APIError.dataTaskError(error.localizedDescription)
+        }
+
+        
+    }
+
+    // MARK: Create a variant of getJSON for the Async & Await concurrency method
+
     // Works with any decodable type: <T: Decodable>, where T is the placeholder
     
     func getJSON <T: Decodable> (dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,

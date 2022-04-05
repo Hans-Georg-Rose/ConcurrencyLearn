@@ -14,33 +14,22 @@ class UserListViewModel: ObservableObject {
     @Published var showAlert = false
     @Published var errorMessage: String?
     
+    @MainActor
+    
     // Make usage of the APIService function to get JSON data
     
-    func fetchUsers() {
+    func fetchUsers() async {
         let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Simulate a slow network to make prograssview visible
-            apiService.getJSON { (result: Result<[User], APIError>) in
-                defer {
-                    DispatchQueue.main.async {
-                        self.isLoading = false
-                    }
-                }
-                switch result {
-                case .success(let users):
-                    DispatchQueue.main.async {
-                        self.users = users
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        self.showAlert = true
-                        self.errorMessage = error.localizedDescription + "\nPlease contact the developer to sort out this mess!"
-                    }
-                    print(error) // to be improved later
-                }
-            }
+        defer {
+            isLoading = false
         }
-        
+        do {
+            users = try await apiService.getJSON()
+        } catch {
+            showAlert = true
+            errorMessage = error.localizedDescription + "\nPlease contact the developer to sort out this mess!"
+        }
     }
 }
 
