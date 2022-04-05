@@ -50,7 +50,7 @@ struct APIService {
         
     }
 
-    // MARK: Create a variant of getJSON for the Async & Await concurrency method
+    // MARK: Create a variant of getJSON closure variant
 
     // Works with any decodable type: <T: Decodable>, where T is the placeholder
     
