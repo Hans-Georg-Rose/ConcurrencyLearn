@@ -8,18 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		ADA1001927F6103E00990BFC /* MacOS_ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1001827F6103E00990BFC /* MacOS_ConcurrencyApp.swift */; };
-		ADA1001B27F6103E00990BFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1001A27F6103E00990BFC /* ContentView.swift */; };
+		ADA1001B27F6103E00990BFC /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1001A27F6103E00990BFC /* UsersListView.swift */; };
 		ADA1001D27F6104400990BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA1001C27F6104400990BFC /* Assets.xcassets */; };
 		ADA1002027F6104400990BFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA1001F27F6104400990BFC /* Preview Assets.xcassets */; };
+		ADA1002927F614FE00990BFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1002827F614FE00990BFC /* User.swift */; };
+		ADA1002B27F6160F00990BFC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1002A27F6160F00990BFC /* Post.swift */; };
+		ADA1002E27F617EB00990BFC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1002D27F617EB00990BFC /* ApiService.swift */; };
+		ADA1003227F6EDB600990BFC /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1003127F6EDB600990BFC /* UserListViewModel.swift */; };
+		ADA1003427F720EA00990BFC /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = ADA1003327F720EA00990BFC /* users.json */; };
+		ADA1003627F7216D00990BFC /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = ADA1003527F7216D00990BFC /* posts.json */; };
+		ADA1003927F7227400990BFC /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1003827F7227400990BFC /* Bundle+Extension.swift */; };
+		ADA1003B27F722CF00990BFC /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1003A27F722CF00990BFC /* MockData.swift */; };
+		ADA1003D27F726F800990BFC /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1003C27F726F800990BFC /* PostsListViewModel.swift */; };
+		ADA1003F27F7285D00990BFC /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA1003E27F7285D00990BFC /* PostsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ADA1001527F6103E00990BFC /* MacOS Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOS Concurrency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA1001827F6103E00990BFC /* MacOS_ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOS_ConcurrencyApp.swift; sourceTree = "<group>"; };
-		ADA1001A27F6103E00990BFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADA1001A27F6103E00990BFC /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
 		ADA1001C27F6104400990BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADA1001F27F6104400990BFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ADA1002127F6104400990BFC /* MacOS_Concurrency.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOS_Concurrency.entitlements; sourceTree = "<group>"; };
+		ADA1002827F614FE00990BFC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ADA1002A27F6160F00990BFC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		ADA1002D27F617EB00990BFC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		ADA1003127F6EDB600990BFC /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		ADA1003327F720EA00990BFC /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		ADA1003527F7216D00990BFC /* posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		ADA1003827F7227400990BFC /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		ADA1003A27F722CF00990BFC /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		ADA1003C27F726F800990BFC /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
+		ADA1003E27F7285D00990BFC /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +72,12 @@
 		ADA1001727F6103E00990BFC /* MacOS Concurrency */ = {
 			isa = PBXGroup;
 			children = (
+				ADA1002F27F6ED5600990BFC /* Views */,
+				ADA1003027F6ED8300990BFC /* ViewModels */,
+				ADA1002C27F617B000990BFC /* Services */,
+				ADA1003727F7225300990BFC /* Extensions */,
+				ADA1002727F614D800990BFC /* Models */,
 				ADA1001827F6103E00990BFC /* MacOS_ConcurrencyApp.swift */,
-				ADA1001A27F6103E00990BFC /* ContentView.swift */,
 				ADA1001C27F6104400990BFC /* Assets.xcassets */,
 				ADA1002127F6104400990BFC /* MacOS_Concurrency.entitlements */,
 				ADA1001E27F6104400990BFC /* Preview Content */,
@@ -65,8 +89,54 @@
 			isa = PBXGroup;
 			children = (
 				ADA1001F27F6104400990BFC /* Preview Assets.xcassets */,
+				ADA1003327F720EA00990BFC /* users.json */,
+				ADA1003527F7216D00990BFC /* posts.json */,
+				ADA1003A27F722CF00990BFC /* MockData.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ADA1002727F614D800990BFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1002827F614FE00990BFC /* User.swift */,
+				ADA1002A27F6160F00990BFC /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADA1002C27F617B000990BFC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1002D27F617EB00990BFC /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ADA1002F27F6ED5600990BFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1001A27F6103E00990BFC /* UsersListView.swift */,
+				ADA1003E27F7285D00990BFC /* PostsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADA1003027F6ED8300990BFC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1003127F6EDB600990BFC /* UserListViewModel.swift */,
+				ADA1003C27F726F800990BFC /* PostsListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ADA1003727F7225300990BFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1003827F7227400990BFC /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +197,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA1003427F720EA00990BFC /* users.json in Resources */,
 				ADA1002027F6104400990BFC /* Preview Assets.xcassets in Resources */,
 				ADA1001D27F6104400990BFC /* Assets.xcassets in Resources */,
+				ADA1003627F7216D00990BFC /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +211,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA1001B27F6103E00990BFC /* ContentView.swift in Sources */,
+				ADA1001B27F6103E00990BFC /* UsersListView.swift in Sources */,
+				ADA1003927F7227400990BFC /* Bundle+Extension.swift in Sources */,
+				ADA1003D27F726F800990BFC /* PostsListViewModel.swift in Sources */,
+				ADA1003227F6EDB600990BFC /* UserListViewModel.swift in Sources */,
+				ADA1002E27F617EB00990BFC /* ApiService.swift in Sources */,
 				ADA1001927F6103E00990BFC /* MacOS_ConcurrencyApp.swift in Sources */,
+				ADA1003B27F722CF00990BFC /* MockData.swift in Sources */,
+				ADA1002927F614FE00990BFC /* User.swift in Sources */,
+				ADA1003F27F7285D00990BFC /* PostsListView.swift in Sources */,
+				ADA1002B27F6160F00990BFC /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
